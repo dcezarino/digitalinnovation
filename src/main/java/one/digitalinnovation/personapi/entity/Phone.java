@@ -14,11 +14,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
+// Vamos utilizar o JPA para fazer o mapeamento das
+// entidades e  criar todo o modelo de dados.
+
 @Entity
-@Data
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
+@Data //getters and setters
+@Builder // padrão de projetos para construção de objetos
+@AllArgsConstructor // construtores
+@NoArgsConstructor// construtores
 public class Phone {
 
     @Id
