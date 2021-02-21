@@ -28,12 +28,8 @@ import java.util.List;
 //@AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonController {
 
-    private PersonRepository personRepository;
+    //private PersonRepository personRepository;
 
-    @Autowired
-    public PersonController(PersonRepository personRepository){
-        this.personRepository = personRepository;
-    }
 //
 //    @PostMapping
 //    public MessageResponseDTO createPerson(@RequestBody Person person){
@@ -45,6 +41,11 @@ public class PersonController {
 //    }
 
    private PersonService personService;
+
+    @Autowired
+    public PersonController(PersonService personService){
+        this.personService = personService;
+    }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
