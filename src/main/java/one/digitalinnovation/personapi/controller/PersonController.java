@@ -28,12 +28,12 @@ import java.util.List;
 //@AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonController {
 
-//    private PersonRepository personRepository;
-//
-//    @Autowired
-//    public PersonController(PersonRepository personRepository){
-//        this.personRepository = personRepository;
-//    }
+    private PersonRepository personRepository;
+
+    @Autowired
+    public PersonController(PersonRepository personRepository){
+        this.personRepository = personRepository;
+    }
 //
 //    @PostMapping
 //    public MessageResponseDTO createPerson(@RequestBody Person person){
