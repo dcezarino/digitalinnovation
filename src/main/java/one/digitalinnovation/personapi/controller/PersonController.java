@@ -28,23 +28,23 @@ import java.util.List;
 //@AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonController {
 
-    private PersonRepository personRepository;
+//    private PersonRepository personRepository;
+//
+//    @Autowired
+//    public PersonController(PersonRepository personRepository){
+//        this.personRepository = personRepository;
+//    }
+//
+//    @PostMapping
+//    public MessageResponseDTO createPerson(@RequestBody Person person){
+//        Person savedPerson = personRepository.save(person);
+//        return MessageResponseDTO
+//                .builder()
+//                .message("Created person with ID " + savedPerson.getId())
+//                .build();
+//    }
 
-    @Autowired
-    public PersonController(PersonRepository personRepository){
-        this.personRepository = personRepository;
-    }
-
-    @PostMapping
-    public MessageResponseDTO createPerson(@RequestBody Person person){
-        Person savedPerson = personRepository.save(person);
-        return MessageResponseDTO
-                .builder()
-                .message("Created person with ID " + savedPerson.getId())
-                .build();
-    }
-
-    /*private PersonService personService;
+   private PersonService personService;
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
@@ -71,5 +71,5 @@ public class PersonController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteById(@PathVariable Long id) throws PersonNotFoundException {
         personService.delete(id);
-    }*/
+    }
 }
