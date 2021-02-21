@@ -13,6 +13,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+// @Service -> Indica para o Sprint para gerenciar uma classe responsável
+// por colocar todas as regrar de negócios da nossa aplicação.
 @Service
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonService {
