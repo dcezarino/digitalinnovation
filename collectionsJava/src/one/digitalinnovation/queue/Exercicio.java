@@ -43,13 +43,6 @@ public class Exercicio {
 		
 		System.out.println(fila.contains("Carlos"));
 		
-		
-		
-
-
-		
-
-		
 	}
 
 }
