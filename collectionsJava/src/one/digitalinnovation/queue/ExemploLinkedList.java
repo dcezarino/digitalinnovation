@@ -16,7 +16,7 @@ public class ExemploLinkedList {
 		filaDeBanco.add("Anderson");
 
 		System.out.println(filaDeBanco);
-
+		filaDeBanco.clear();
 		// Return the first element and remove it
 		String clienteASerAtendido = filaDeBanco.poll();
 		System.out.println(clienteASerAtendido);
