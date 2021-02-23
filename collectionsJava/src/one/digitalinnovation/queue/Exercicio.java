@@ -41,8 +41,7 @@ public class Exercicio {
 		//fila.clear();
 		System.out.println(fila.isEmpty());
 		
-		System.out.println(fila.contains("Carlos"));
-		
+		System.out.println(fila.contains("Carlos"));		
 	}
 
 }
