@@ -6,6 +6,7 @@ import java.util.Map;
 public class ExemploHashMap {
 
 	public static void main(String[] args) {
+		
 		Map<String, Integer> campeoesMundialFifa = new HashMap<>();
 
 		// Adiciona os campeões mundiais fifa no mapa
@@ -32,6 +33,7 @@ public class ExemploHashMap {
 
 		// Remove o campeão Franca
 		campeoesMundialFifa.remove("França");
+		
 		// Retorna se existe ou não um campeão Fraça
 		System.out.println(campeoesMundialFifa.containsKey("França"));
 
@@ -42,6 +44,46 @@ public class ExemploHashMap {
 		System.out.println(campeoesMundialFifa.size());
 
 		System.out.println(campeoesMundialFifa);
+		
+		// Navega nos registros do mapa
+		for (Map.Entry<String, Integer> entry : campeoesMundialFifa.entrySet()) {
+			System.out.println(entry.getKey() + " - " + entry.getValue());			
+		}
+		
+		// Navega nos registros do mapa
+		for (String key : campeoesMundialFifa.keySet()) {
+			System.out.println(key + " - " + campeoesMundialFifa.get(key));			
+		}
+		
+		System.out.println(campeoesMundialFifa);
+		
+		// Verifica se o mapa contém a chave Estados Unidos
+		System.out.println(campeoesMundialFifa.containsKey("Estados Unidos"));
+		
+		// Verifica se o mapa contém o valor 5
+		System.out.println(campeoesMundialFifa.containsValue(5));
+		
+		// Verifica o tamanho antes e depois de limpar o mapa
+		System.out.println(campeoesMundialFifa.size());		
+		
+		campeoesMundialFifa.clear();			
+		
+		System.out.println(campeoesMundialFifa.size());
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 	}
 
