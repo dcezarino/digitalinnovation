@@ -23,6 +23,8 @@ public class ExemploStremAPI {
 
 		// Retorna a contagem de elementos do stream
 		System.out.println("Contagem: " + estudantes.stream().count());
+		
+		System.out.println(estudantes.stream().peek(System.out::println));
 
 		// Retorna o elemento com o maior número de letras
 		System.out
