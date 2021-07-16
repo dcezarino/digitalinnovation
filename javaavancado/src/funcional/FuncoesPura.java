@@ -1,3 +1,4 @@
+package funcional;
 import java.util.function.BiPredicate;
 
 public class FuncoesPura {
