@@ -31,8 +31,7 @@ public class ExemploList {
 		nomes.remove("Ana");
 		System.out.println(nomes);
 		
-		for(String nome : nomes) {
-			
+		for(String nome : nomes) {			
 			System.out.println("Nome: " + nome);
 		}
 		
@@ -60,8 +59,6 @@ public class ExemploList {
 		
 		boolean isEmpty = nomes.isEmpty();
 		System.out.println(isEmpty);		
-		
-		
 		
 	}
 
