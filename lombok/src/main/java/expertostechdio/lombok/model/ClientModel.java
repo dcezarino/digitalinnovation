@@ -2,12 +2,15 @@ package expertostechdio.lombok.model;
 
 import javax.persistence.*;
 
-@Entity(name = "client")
+@Entity(name = "tb_client")
 public class ClientModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    private OrderModel orderModel;
 
     @Column(length = 100, nullable = false)
     private String name;

@@ -1,19 +1,17 @@
 package expertostechdio.lombok.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
-@Entity(name = "tb_product")
-public class ProductModel {
+@Entity(name = "tb_orderitem")
+public class OrderItemModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String description;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private ProductModel product;
 
     private BigDecimal price;
 
@@ -25,12 +23,12 @@ public class ProductModel {
         this.id = id;
     }
 
-    public String getDescription() {
-        return description;
+    public ProductModel getProduct() {
+        return product;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setProduct(ProductModel product) {
+        this.product = product;
     }
 
     public BigDecimal getPrice() {
