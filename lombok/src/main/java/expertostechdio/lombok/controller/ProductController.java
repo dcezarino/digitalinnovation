@@ -3,6 +3,7 @@ package expertostechdio.lombok.controller;
 
 import expertostechdio.lombok.model.ProductModel;
 import expertostechdio.lombok.repository.ProductRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,13 +11,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/product")
+@AllArgsConstructor
 public class ProductController {
 
     private final ProductRepository productRepository;
-
-    public ProductController(ProductRepository productRepository){
-        this.productRepository = productRepository;
-    }
 
     @GetMapping("/listAll")
     public ResponseEntity<List<ProductModel>> listAll() {
